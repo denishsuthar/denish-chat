@@ -1,0 +1,104 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;
+  height: 100%; */
+}
+
+.message {
+  /* max-width: 70%;  */
+  margin: 8px;
+  /* padding: 12px; */
+  border-radius: 10px;
+}
+
+.sent {
+  background-color: #007BFF;
+  /* Color for sent messages */
+  align-self: flex-end;
+  color: #fff;
+  /* Text color for sent messages */
+  /* display: flex; */
+  display: table-caption;
+  max-width: 48%;
+  align-items: flex-end;
+}
+
+.received {
+  background-color: #E5E5EA;
+  /* Color for received messages */
+  align-self: flex-start;
+  color: #000;
+  /* Text color for received messages */
+  display: flex;
+  max-width: 48%;
+  align-items: flex-end;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column-reverse;
+  max-height: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-color) var(--theme-bg-color);
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--theme-bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    border-radius: 6px;
+    /* Adjust for rounder corners */
+  }
+}
+
+.timeText {
+  font-size: 10px;
+  margin-left: 20px;
+  margin: 15px;
+  /* width: 50%; */
+}
+
+.messageText {
+  font-size: 15px;
+  margin-left: 20px;
+  margin: 15px;
+  /* width: 50%; */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.groupText {
+  display: flex;
+  align-items: flex-end;
+}
+
+.msg-profile-group{
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.msg-group{
+  display: flex;
+}

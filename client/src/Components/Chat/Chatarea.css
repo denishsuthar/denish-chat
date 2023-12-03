@@ -1,0 +1,226 @@
+/* chat-styles.css */
+.chat-container {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.emojiSetDiv {
+  position: absolute;
+  z-index: 999;
+  top: 400px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  margin-top: auto;
+}
+
+#message-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#send-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.form {
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.sendImage {
+  width: 3%;
+  height: 30%;
+  cursor: pointer;
+}
+
+#message-input {
+  padding: 20px;
+  border: none;
+}
+
+.emojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emojiClass {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-size: 26px;
+}
+
+.inputDiv {
+  width: 100%;
+}
+
+.ql-toolbar.ql-snow+.ql-container.ql-snow {
+  border-radius: 0px 0px 5px 5px;
+  height: 70px;
+  overflow-y: auto;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+  display: flex;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.ql-editor.ql-blank::before {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.ql-editor p {
+  font-family: "Manrope", sans-serif;
+}
+
+.dark-mode .ql-editor.ql-blank::before {
+  color: #444 !important;
+}
+
+.light-mode .ql-editor.ql-blank::before {
+  color: black !important;
+}
+
+.dark-modeHeader {
+  color: white !important;
+  border: none !important;
+  border-right: 0.5px solid #80808047 !important;
+}
+
+.DrawerBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.GroupInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GroupAvatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+h4.memberName {
+  margin: 0px;
+}
+
+.participantsDiv {
+  margin-bottom: 30px;
+}
+
+.css-1tygz4e-MuiDrawer-docked .MuiDrawer-paper {
+  overflow-x: hidden !important;
+}
+
+.memberContainer {
+  display: flex;
+  min-width: 75%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AdminSpan {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 6px;
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+#outlined-controlled {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  border-bottom: 1px solid #007bff;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 7.5px 7.5px !important;
+}
+
+.dark-modeScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light-modeScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+}
+
+.light-mode {
+  border: none !important;
+}

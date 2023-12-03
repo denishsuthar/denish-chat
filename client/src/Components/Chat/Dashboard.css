@@ -1,0 +1,45 @@
+.dashboard-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+.data-grid-container {
+  width: 100%;
+  max-width: 60%;
+}
+
+.add-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+}
+
+.dataGridDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.Addbtn {
+  border-radius: 20px;
+  border: none;
+  background-color: #007bff;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.Addbtn:hover {
+  background-color: black;
+  color: white;
+}
