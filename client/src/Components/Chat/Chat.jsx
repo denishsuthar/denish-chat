@@ -65,7 +65,9 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 
 import ClearIcon from '@mui/icons-material/Clear';
-import v2Logo from "../../../src/v2logoor.png"
+import denishLogoWhite from "../../../src/DENISH_white.png"
+import denishLogoGrey from "../../../src/DENISH_Grey.png"
+
 
 
 const Chat = () => {
@@ -913,7 +915,9 @@ const Chat = () => {
         <div className={`header ${isDarkMode ? "dark-mode" : ""}`}>
           <div>
             {/* <h2 className="chatapp">Chat App</h2> */}
-            <img className="headerLogo" src={v2Logo} alt="v2 header logo" />
+            {/* <img className="headerLogo" src={denishLogoWhite} alt="denish header logo" /> */}
+            <img className="headerLogo" src={isDarkMode ? denishLogoWhite : denishLogoGrey} alt="denish header logo" />
+
           </div>
           <div className="themeProfile">
             <div>
