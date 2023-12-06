@@ -45,6 +45,10 @@ const userSchema = new mongoose.Schema({
   lastSeen:{
     type:String
   },
+  updatedAt: {
+    type: Date,
+    default: Date.now,
+  },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });
@@ -53,6 +57,13 @@ const userSchema = new mongoose.Schema({
 userSchema.pre("save", function (next) {
   if (this.isModified("email")) {
     this.email = this.email.toLowerCase();
+  }
+  next();
+});
+
+userSchema.pre('save', function (next) {
+  if (this.isModified('lastSeen')) {
+    this.updatedAt = new Date();
   }
   next();
 });

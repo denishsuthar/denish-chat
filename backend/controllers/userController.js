@@ -6,6 +6,7 @@ import cloudinary from "cloudinary";
 import getDataUri from "../utils/dataUri.js";
 import { Group } from "../models/groupModel.js";
 import { socketIo } from "../server.js";
+import cron from 'node-cron';
 
 // // Login
 // export const login = catchAsyncError(async (req, res, next) => {
@@ -285,4 +286,22 @@ export const lastSeenUsers = catchAsyncError(async (req, res, next) => {
     success: true,
     users,
   });
+});
+
+
+cron.schedule('*/30 * * * *', async () => {
+  const fifteenMinutesAgo = new Date(Date.now() - 30 * 60 * 1000);
+  
+  try {
+    const usersToSetOffline = await User.find({
+      lastSeen: 'Online',
+      updatedAt: { $lt: fifteenMinutesAgo },
+    });
+    await Promise.all(usersToSetOffline.map(async (user) => {
+      user.lastSeen = new Date()
+      await user.save();
+    }));
+  } catch (error) {
+    console.error('Error updating users:', error);
+  }
 });
