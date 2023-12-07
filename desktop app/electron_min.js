@@ -3,7 +3,7 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const localServerApp = express();
-const PORT = 8088;
+const PORT = 8089;
 const startLocalServer = (done) => {
   localServerApp.use(express.json({ limit: "100mb" }));
   localServerApp.use(cors());
@@ -37,7 +37,7 @@ function createWindow() {
 }
 
 if (process.platform === "win32") {
-  app.setAppUserModelId("v2 Web Solutions");
+  app.setAppUserModelId("Denish Chat");
 }
 
 app.whenReady().then(() => {
